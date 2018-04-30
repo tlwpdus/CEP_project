@@ -37,9 +37,9 @@ int main(void)
 		show_interface();
 		intro();
 		int x, y;
-		scanf("%d",&x); x--;
-		if (x<0) {
-			scanf("%d%d",&x,&y); x--; y--;
+		scanf("%d",&y); y--;
+		if (y<0) {
+			scanf("%d%d",&y,&x); y--; x--;
 			if (!ok(x,y)||display_board[x][y]) {
 				printf("Enter valid location!\n");
 				printf("Press enter to continue...\n");
@@ -49,7 +49,7 @@ int main(void)
 			flag_board[x][y] ^= 1;
 		}
 		else {
-			scanf("%d",&y); y--;
+			scanf("%d",&x); x--;
 			if (!ok(x,y)) {
 				printf("Enter valid location!\n");
 				printf("Press enter to continue...\n");
